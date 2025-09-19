@@ -1,39 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #72d8f4, #1873e3); 
-    color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #72d8f4, #1873e3);
+  color: white;
+  overflow: hidden;
 }
 
 .clock-container {
-    width: 600px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.8); 
-    border-radius: 20px;
-    padding: 20px 40px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 10px 50px 60px rgba(63, 1, 92, 0.3);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-text-fill-color: aliceblue;
 }
 
 .time {
-    justify-content: center;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .date {
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #f0f0f0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+
+
+.flying-time {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  pointer-events: none;
+  z-index: 9999;            
+  will-change: transform, left, top, opacity, text-shadow;
+  text-shadow: 0 0 10px rgba(255,255,255,0.9), 60px 60px 20px rgba(255, 0, 0, 0.7);
 }
